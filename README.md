@@ -110,5 +110,5 @@ sc delete [название_службы]
 
 ## 💙 Благодарности
 
-Огромная благодарность создателю [zapret-roblox](https://github.com/Lux1de/zapret-roblox) - [Lux1de](https://github.com/Lux1de) за создание этого обхода!
+Огромная благодарность создателю [zapret-roblox](https://github.com/Lux1de/zapret-roblox) - [Lux1de](https://github.com/Lux1de) за создание zapret-roblox!
 Lux1de, пожайлуста, не ломай мне череп за взятое ReadMe 😓
