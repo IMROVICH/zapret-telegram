@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎮 zapret-telegram
+# ✉ zapret telegram ✉
 
 **Рабочий обход блокировки Telegram в России**
 
