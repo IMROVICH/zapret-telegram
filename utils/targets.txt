@@ -1,0 +1,7 @@
+Roblox Main = "https://www.roblox.com"
+Roblox Auth = "https://auth.roblox.com"
+Discord Main = "https://discord.com"
+Discord Gateway = "https://gateway.discord.gg"
+Discord CDN = "https://cdn.discordapp.com"
+YouTube Web = "https://www.youtube.com"
+YouTube Video = "https://redirector.googlevideo.com"
