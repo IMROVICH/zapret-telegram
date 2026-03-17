@@ -7,7 +7,7 @@
 Основан на [zapret](https://github.com/bol-van/zapret), и [zapret roblox](https://github.com/Lux1de/zapret-roblox) специально настроен под новые ограничения РКН.  
 Исправляет ошибки подключения (Connection Error) и возвращает доступ к сайту и играм.
 
-**Также работает с другими заблокированными сервисами:** YouTube, Discord, Roblox и многими другими.
+**Также работает с другими заблокированными сервисами:** YouTube, Discord, Roblox, instagram, facebook и многими другими.
 
 ---
 
