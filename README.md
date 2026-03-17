@@ -4,7 +4,7 @@
 
 **Рабочий обход блокировки Telegram в России**
 
-Основан на [zapret](https://github.com/bol-van/zapret), и [zapret roblox]()специально настроен под новые ограничения РКН.  
+Основан на [zapret](https://github.com/bol-van/zapret), и [zapret roblox](https://github.com/Lux1de/zapret-roblox) специально настроен под новые ограничения РКН.  
 Исправляет ошибки подключения (Connection Error) и возвращает доступ к сайту и играм.
 
 **Также работает с другими заблокированными сервисами:** YouTube, Discord, Roblox и многими другими.
@@ -28,7 +28,7 @@
 
 ## 🚀 Быстрый старт
 
-1. **Скачайте последнюю версию** с [releases](https://github.com/IMROVICH/zapret-telegram/releases/latest)
+1. **Скачайте последнюю версию** с [releases](https://github.com/IMROVICH/zapret-telegram)
 
 2. **Распакуйте** в любую папку без кириллицы и спецсимволов (например: `C:\zapret`)
 
