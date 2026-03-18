@@ -104,7 +104,7 @@ sc delete [название_службы]
 
 ## ⭐ Поддержка
 
-Поставьте звезду ⭐ [zapret-roblox](https://github.com/Lux1de/zapret-roblox), если проект помог вам!
+Поставьте звезду ⭐ [zapret-roblox](https://github.com/Lux1de/zapret-roblox) и [zapret-telegram](https://github.com/IMROVICH/zapret-telegram), если проект помог вам!
 
 ## 📜 Лицензия
 
