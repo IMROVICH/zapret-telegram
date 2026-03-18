@@ -28,7 +28,7 @@
 
 ## 🚀 Быстрый старт
 
-1. **Скачайте последнюю версию** с [репозитория](https://github.com/IMROVICH/zapret-telegram)
+1. **Скачайте последнюю версию** с [релизов](https://github.com/IMROVICH/zapret-telegram/releases)
 
 2. **Распакуйте** в любую папку без кириллицы и спецсимволов (например: `C:\zapret`)
 
