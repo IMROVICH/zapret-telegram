@@ -91,7 +91,7 @@ sc delete [название_службы]
 
 ### Другие проблемы
 
-Создайте issue в [разделе Issues](https://github.com/Lux1de/zapret-roblox/issues)
+Создайте issue в [разделе Issues](https://github.com/IMROVICH/zapret-telegram/issues)
 
 ## � Добавление своих ресурсов
 
