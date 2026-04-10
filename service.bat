@@ -74,7 +74,7 @@ echo.
 echo   :: SETTINGS
 echo      4. Game Filter         [!GameFilterStatus!]
 echo      5. IPSet Filter        [!IPsetStatus!]
-echo      6. IP Filter           [!IPStatus!]
+echo      6. IP Filter           [!IPStatus!] (TESTING)
 echo      6. Auto-Update Check   [!CheckUpdatesStatus!]
 echo.
 echo   :: UPDATES
