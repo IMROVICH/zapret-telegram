@@ -881,8 +881,7 @@ goto menu
 chcp 437 > nul
 cls
 
-echo Select IP filter mode:
-echo    
+echo Select IP filter mode:    
 echo   1. IPv4
 echo   2. IPv6
 echo.
