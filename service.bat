@@ -74,7 +74,7 @@ echo.
 echo   :: SETTINGS
 echo      4. Game Filter         [!GameFilterStatus!]
 echo      5. IPSet Filter        [!IPsetStatus!]
-echo      6. IP Filter           [!IPStatus!] (TESTING)
+echo      6. IP Filter           [!IPFilterChoice!] (TESTING)
 echo      6. Auto-Update Check   [!CheckUpdatesStatus!]
 echo.
 echo   :: UPDATES
@@ -889,9 +889,9 @@ set "IPFilterChoice=1"
 set /p "IPFilterChoice=Select option (1-2, default: 1): "
 if %IPFilterChoice%=="" set "IPFilterChoice=1"
 
-if "%GameFilterChoice%"=="0" (
+if "%IPFilterChoice%"=="0" (
     if exist "%gameFlagFile%" (
-        del /f /q "%gameFlagFile%"
+        echo .
     ) else (
         goto menu
     )
