@@ -56,6 +56,7 @@ setlocal EnableDelayedExpansion
 :menu
 cls
 call :ipset_switch_status
+call :ip_filter
 call :game_switch_status
 call :check_updates_switch_status
 
@@ -73,6 +74,7 @@ echo.
 echo   :: SETTINGS
 echo      4. Game Filter         [!GameFilterStatus!]
 echo      5. IPSet Filter        [!IPsetStatus!]
+echo      6. IP Filter           [!IPStatus!]
 echo      6. Auto-Update Check   [!CheckUpdatesStatus!]
 echo.
 echo   :: UPDATES
@@ -95,12 +97,13 @@ if "%menu_choice%"=="2" goto service_remove
 if "%menu_choice%"=="3" goto service_status
 if "%menu_choice%"=="4" goto game_switch
 if "%menu_choice%"=="5" goto ipset_switch
-if "%menu_choice%"=="6" goto check_updates_switch
-if "%menu_choice%"=="7" goto ipset_update
-if "%menu_choice%"=="8" goto hosts_update
-if "%menu_choice%"=="9" goto service_check_updates
-if "%menu_choice%"=="10" goto service_diagnostics
-if "%menu_choice%"=="11" goto run_tests
+if "%menu_choice%"=="6" goto ip_filter
+if "%menu_choice%"=="7" goto check_updates_switch
+if "%menu_choice%"=="8" goto ipset_update
+if "%menu_choice%"=="9" goto hosts_update
+if "%menu_choice%"=="10" goto service_check_updates
+if "%menu_choice%"=="11" goto service_diagnostics
+if "%menu_choice%"=="12" goto run_tests
 if "%menu_choice%"=="0" exit /b
 goto menu
 
@@ -363,9 +366,9 @@ chcp 437 > nul
 cls
 
 :: Set current version and URLs
-set "GITHUB_VERSION_URL=https://raw.githubusercontent.com/Lux1de/zapret-roblox/main/.service/version.txt"
-set "GITHUB_RELEASE_URL=https://github.com/Lux1de/zapret-roblox/releases/tag/"
-set "GITHUB_DOWNLOAD_URL=https://github.com/Lux1de/zapret-roblox/releases/latest"
+set "GITHUB_VERSION_URL=https://raw.githubusercontent.com/IMROVICH/zapret-telegram/main/.service/version.txt"
+set "GITHUB_RELEASE_URL=https://github.com/IMROVICH/zapret-telegram/releases/tag/"
+set "GITHUB_DOWNLOAD_URL=https://github.com/IMROVICH/zapret-telegram/releases/latest"
 
 :: Get the latest version from GitHub
 for /f "delims=" %%A in ('powershell -NoProfile -Command "(Invoke-WebRequest -Uri \"%GITHUB_VERSION_URL%\" -Headers @{\"Cache-Control\"=\"no-cache\"} -UseBasicParsing -TimeoutSec 5).Content.Trim()" 2^>nul') do set "GITHUB_VERSION=%%A"
@@ -871,6 +874,42 @@ if "%IPsetStatus%"=="loaded" (
 pause
 goto menu
 
+:: IP FILTER ==========================
+
+
+:ip_filter
+chcp 437 > nul
+cls
+
+echo Select IP filter mode:
+
+echo   1. IPv4
+echo   2. IPv6
+echo.
+set "IPFilterChoice=1"
+set /p "IPFilterChoice=Select option (1-2, default: 1): "
+if %IPFilterChoice%=="" set "IPFilterChoice=1"
+
+if "%GameFilterChoice%"=="0" (
+    if exist "%gameFlagFile%" (
+        del /f /q "%gameFlagFile%"
+    ) else (
+        goto menu
+    )
+) else if "%IPFilterChoice%"=="1" (
+    filter-l3=ipv4
+) else if "%IPFilterChoice%"=="2" (
+    filter-l3=ipv6 
+) else (
+    echo Invalid choice, exiting...
+    pause
+    goto menu
+)
+
+call :PrintYellow "Restart the zapret to apply the changes"
+pause
+goto menu
+
 
 :: IPSET UPDATE =======================
 :ipset_update
@@ -906,7 +945,7 @@ chcp 437 > nul
 cls
 
 set "hostsFile=%SystemRoot%\System32\drivers\etc\hosts"
-set "hostsUrl=https://raw.githubusercontent.com/Lux1de/zapret-roblox/refs/heads/main/.service/hosts"
+set "hostsUrl=https://raw.githubusercontent.com/IMROVICH/zapret-telegram/blob/main/.servise/hosts"
 set "tempFile=%TEMP%\zapret_hosts.txt"
 set "needsUpdate=0"
 
