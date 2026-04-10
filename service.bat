@@ -56,7 +56,7 @@ setlocal EnableDelayedExpansion
 :menu
 cls
 call :ipset_switch_status
-call :ip_filter
+
 call :game_switch_status
 call :check_updates_switch_status
 
@@ -882,7 +882,7 @@ chcp 437 > nul
 cls
 
 echo Select IP filter mode:
-
+echo    
 echo   1. IPv4
 echo   2. IPv6
 echo.
