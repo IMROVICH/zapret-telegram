@@ -74,17 +74,16 @@ echo.
 echo   :: SETTINGS
 echo      4. Game Filter         [!GameFilterStatus!]
 echo      5. IPSet Filter        [!IPsetStatus!]
-echo      6. IP Filter           [!IPFilterChoice!] (TESTING)
-echo      7. Auto-Update Check   [!CheckUpdatesStatus!]
+echo      6. Auto-Update Check   [!CheckUpdatesStatus!]
 echo.
 echo   :: UPDATES
-echo      8. Update IPSet List
-echo      9. Update Hosts File
-echo      10. Check for Updates
+echo      7. Update IPSet List
+echo      8. Update Hosts File
+echo      9. Check for Updates
 echo.
 echo   :: TOOLS
-echo      11. Run Diagnostics
-echo      12. Run Tests
+echo      10. Run Diagnostics
+echo      11. Run Tests
 echo.
 echo   ----------------------------------------
 echo      0. Exit
@@ -97,13 +96,12 @@ if "%menu_choice%"=="2" goto service_remove
 if "%menu_choice%"=="3" goto service_status
 if "%menu_choice%"=="4" goto game_switch
 if "%menu_choice%"=="5" goto ipset_switch
-if "%menu_choice%"=="6" goto ip_filter
-if "%menu_choice%"=="7" goto check_updates_switch
-if "%menu_choice%"=="8" goto ipset_update
-if "%menu_choice%"=="9" goto hosts_update
-if "%menu_choice%"=="10" goto service_check_updates
-if "%menu_choice%"=="11" goto service_diagnostics
-if "%menu_choice%"=="12" goto run_tests
+if "%menu_choice%"=="6" goto check_updates_switch
+if "%menu_choice%"=="7" goto ipset_update
+if "%menu_choice%"=="8" goto hosts_update
+if "%menu_choice%"=="9" goto service_check_updates
+if "%menu_choice%"=="10" goto service_diagnostics
+if "%menu_choice%"=="11" goto run_tests
 if "%menu_choice%"=="0" exit /b
 goto menu
 
